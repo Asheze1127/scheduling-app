@@ -1,5 +1,3 @@
-.calendar {
-  width:100% ;  /* ビューポートの90%の幅 */
-  height: 50vh; /* ビューポートの80%の高さ */
-  max-width: 1200px; /* 最大幅を制限 */
+.fc{
+    height:100vh;
 }

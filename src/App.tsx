@@ -3,13 +3,16 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import jaLocale from '@fullcalendar/core/locales/ja';
+import interactionPlugin from '@fullcalendar/interaction';
+import { Calendar } from './stories/calendar/Calendar';
 import './App.css';
 
+const usercolor = '#ff9f89';
 function App() {
   return (
     <div className="calendar">
       <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
+        plugins={[dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         locales={[jaLocale]}
         locale='ja'
@@ -19,9 +22,9 @@ function App() {
           right: 'dayGridMonth,timeGridWeek listWeek',
         }}
         events={[
-          {title:'eventを', start: '2025-03-14'},
-          {title:'こんな感じで追加できます', start: '2025-03-15T10:30:00', end: '2025-03-17T14:30:00'},
-          {title:'こんな感じで追加できます', start: '2025-03-14T14:30:00', end: '2025-03-17T14:30:00'}
+          { title: 'eventを', start: '2025-03-14' },
+          { title: 'こんな感じで追加できます', color: usercolor, start: '2025-03-15T10:30:00', end: '2025-03-17T14:30:00' },
+          { title: 'こんな感じで追加できます', start: '2025-03-14T14:30:00', end: '2025-03-17T14:30:00' }
         ]}
       />
     </div>
