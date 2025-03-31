@@ -4,13 +4,18 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import jaLocale from '@fullcalendar/core/locales/ja';
 import interactionPlugin from '@fullcalendar/interaction';
-import { Calendar } from './stories/calendar/Calendar';
+import { Header } from './stories/Header';
 import './App.css';
 
 const usercolor = '#ff9f89';
 function App() {
   return (
     <div className="calendar">
+      <Header
+        onCreateAccount={() => { }}
+        onLogin={() => { }}
+        onLogout={() => { }}
+      />
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin]}
         initialView="dayGridMonth"
